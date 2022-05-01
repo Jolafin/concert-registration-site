@@ -67,7 +67,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <SimpleGrid columns={2}>
+      <SimpleGrid columns={[1, 2]}>
         <Box p={10}>
           <Stack shadow="lg" p={8} spacing={3}>
             <Center>
