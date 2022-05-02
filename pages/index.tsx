@@ -145,10 +145,17 @@ const Home: NextPage = () => {
                     message: "Tour and date is required",
                   },
                 })}
+                id="seat_opt"
               >
-                <option value="option1">Grand Royal June 25,2022</option>
-                <option value="option2">Maiden Stream July 20,2022</option>
-                <option value="option3">Lucky Strike Aug 12, 2022</option>
+                <option value="option1" id="tour-1">
+                  Grand Royal June 25,2022
+                </option>
+                <option value="option2" id="tour-2">
+                  Maiden Stream July 20,2022
+                </option>
+                <option value="option3" id="tour-3">
+                  Lucky Strike Aug 12, 2022
+                </option>
               </Select>
               <FormErrorMessage>{errors.tour?.message}</FormErrorMessage>
             </FormControl>
@@ -171,11 +178,18 @@ const Home: NextPage = () => {
                     onChange={(value) => {
                       onChange(value);
                     }}
+                    id="seat-opt"
                   >
                     <Stack spacing={4} direction="row">
-                      <Radio value="1">General</Radio>
-                      <Radio value="2">VIP</Radio>
-                      <Radio value="3">Sky Box</Radio>
+                      <Radio value="1" id="radio-1">
+                        General
+                      </Radio>
+                      <Radio value="2" id="radio-2">
+                        VIP
+                      </Radio>
+                      <Radio value="3" id="radio-3">
+                        Sky Box
+                      </Radio>
                     </Stack>
                   </RadioGroup>
                 )}
