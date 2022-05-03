@@ -129,6 +129,7 @@ const Home: NextPage = () => {
                 width={20}
                 {...register("age", {
                   required: { value: true, message: "Age is required" },
+                  min: {value: 16, message: 'Invalid age or too young'} 
                 })}
               />
 
@@ -145,7 +146,7 @@ const Home: NextPage = () => {
                     message: "Tour and date is required",
                   },
                 })}
-                id="seat_opt"
+                id="tour-opt"
               >
                 <option value="option1" id="tour-1">
                   Grand Royal June 25,2022
@@ -210,6 +211,7 @@ const Home: NextPage = () => {
                     value: true,
                     message: "Number of ticket is required",
                   },
+                  min: {value: 1, message: 'Cannot reserve less than 1 ticket'} ,
                   validate: (value) => {
                     if (getValues("age") < 18 && value > 10) {
                       return "Cannot by more than 10 tickets if age is below 18!";
